@@ -25,12 +25,12 @@
             border-radius: 10px;
         }
         li {
-            padding: 15px 20px;
+            padding: 12px 15px; /* تصغير الحجم */
         }
         li a {
             color: #fff;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px; /* تصغير الحجم */
             font-weight: 600;
         }
         li a:hover {
@@ -40,7 +40,7 @@
 
         /* تنسيق العناوين */
         h1 {
-            font-size: 3em;
+            font-size: 2.5em; /* تصغير حجم العنوان */
             color: #42464d;
             margin: 20px 0;
         }
@@ -95,8 +95,8 @@
         /* زر البحث الثابت */
         .search-button {
             position: fixed;
-            bottom: 20px; /* المسافة من أسفل الصفحة */
-            right: 20px;  /* المسافة من الجهة اليمنى */
+            bottom: 20px;
+            right: 20px;
             padding: 12px 20px;
             background-color: #007b7f;
             color: white;
@@ -106,7 +106,7 @@
             text-decoration: none;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000; /* تأكد من أن الزر يظهر فوق المحتويات الأخرى */
+            z-index: 1000;
         }
 
         .search-button:hover {
@@ -145,25 +145,64 @@
             transition: transform 0.3s;
         }
 
-.book-item img:hover {
-    transform: scale(1.05);
-}
+        .book-item img:hover {
+            transform: scale(1.05);
+        }
 
-.borrow-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007b7f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+        .borrow-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007b7f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-.borrow-button:hover {
-    background-color: #006f6f;
-}
-</style>
+        .borrow-button:hover {
+            background-color: #006f6f;
+        }
+
+        /* تنسيق الأجهزة المحمولة */
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column; /* جعل القائمة عمودية */
+            }
+            li {
+                padding: 10px 12px; /* تصغير padding للعناصر */
+            }
+            li a {
+                font-size: 14px; /* تصغير حجم الخط */
+            }
+            h1 {
+                font-size: 2em; /* تصغير العنوان */
+            }
+            .books-container {
+                gap: 20px;
+            }
+            .book-item {
+                width: 100%; /* جعل الكتب تأخذ العرض الكامل على الجوال */
+                padding: 10px;
+            }
+            .book-item img {
+                max-height: 200px; /* تصغير حجم الصور */
+            }
+        }
+
+        @media (max-width: 480px) {
+            li {
+                padding: 8px 10px; /* تصغير أكثر للأزرار */
+            }
+            li a {
+                font-size: 12px; /* تصغير الخط */
+            }
+            .custom-button {
+                font-size: 16px; /* تصغير الخط */
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -222,7 +261,6 @@
         <h3>مؤيد سليم - فيزياء</h3>
         <button class="borrow-button" onclick="window.location.href='https://t.me/d_tt02/23'">تحميل الكتاب</button>
     </div>
-   
 </div>
 
 <!-- زر البحث الثابت -->
